@@ -34,12 +34,12 @@ html {
 }
 
 section .left {
-  .background {
-    display: block;
-    width: 10px;
-    background-size: cover;
-  }
+  background-image: url(/images/bg-pattern-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 40%;
 }
+
 .left-side {
   display: flex;
   flex-direction: column;

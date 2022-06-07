@@ -44,20 +44,31 @@ html {
   display: flex;
   flex-direction: column;
   padding: 3rem 7rem;
+  font-family: $font-primary;
 
   h1 {
-    padding-top: 5rem;
+    padding-top: 7rem;
     text-transform: uppercase;
     font-size: 5rem;
-    font-family: $font-primary;
-    font-weight: 300;
+    line-height: 1.1em;
+    letter-spacing: 0.9rem;
 
     .pink {
       color: $color-primary-red;
+      font-weight: 300;
+    }
+
+    .dark {
+      color: $color-dark-greyish-red;
+      font-weight: 400;
     }
   }
 
-  &.left-side__text {
+  .left-side__text {
+    color: $color-primary-red;
+    font-size: 19px;
+    width: 480px;
+    line-height: 30px;
   }
 }
 

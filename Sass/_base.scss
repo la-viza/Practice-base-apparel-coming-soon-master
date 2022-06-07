@@ -33,11 +33,11 @@ html {
   grid-template-columns: 60% 40%;
 }
 
-section .left {
+.left {
   background-image: url(/images/bg-pattern-desktop.jpg);
   background-repeat: no-repeat;
   background-position: left;
-  background-size: 40%;
+  background-size: cover;
 }
 
 .left-side {

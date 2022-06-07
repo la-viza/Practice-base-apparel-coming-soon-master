@@ -26,16 +26,43 @@ $bp-small: 37.5em; // 600px/16
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 10px/16px = 62.5%
 }
 
 .container {
   display: grid;
   grid-template-columns: 60% 40%;
+}
+
+section .left {
+  .background {
+    display: block;
+    width: 10px;
+    background-size: cover;
+  }
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 7rem;
+
+  h1 {
+    padding-top: 5rem;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-family: $font-primary;
+    font-weight: 300;
+
+    .pink {
+      color: $color-primary-red;
+    }
+  }
 
   &.left-side__text {
   }
+}
 
-  &.image {
-  }
+.image {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
 }

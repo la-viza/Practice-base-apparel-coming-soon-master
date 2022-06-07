@@ -8,8 +8,14 @@
 }
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
 }
 
 .container {
@@ -63,10 +69,10 @@ html {
   line-height: 30px;
 }
 
-.image {
-  display: -ms-grid;
-  display: grid;
-  min-width: 100%;
-  min-height: 100%;
+.right-side {
+  background-image: url(/images/hero-desktop.jpg);
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=main.css.map */

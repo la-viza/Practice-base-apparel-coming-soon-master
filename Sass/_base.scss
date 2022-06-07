@@ -25,9 +25,14 @@ $bp-small: 37.5em; // 600px/16
 }
 
 html {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+  overflow: hidden;
 }
-
+body {
+  height: 100%;
+}
 .container {
   display: grid;
   grid-template-columns: 60% 40%;
@@ -72,8 +77,8 @@ html {
   }
 }
 
-.image {
-  display: grid;
-  min-width: 100%;
-  min-height: 100%;
+.right-side {
+  background-image: url(/images/hero-desktop.jpg);
+  background-size: cover;
+  object-fit: cover;
 }

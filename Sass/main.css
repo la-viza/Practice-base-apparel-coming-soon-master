@@ -78,6 +78,7 @@ body {
 }
 
 .left-side input {
+  position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -86,23 +87,28 @@ body {
   border-radius: 5rem;
   padding: 1rem;
   width: 20vw;
+  background-color: Linear, 135deg, from white, to #fff5f5;
 }
 
 .left-side button {
+  position: absolute;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   border: none;
   border-radius: 2rem;
-  padding: 0.7rem 0.7rem;
-  margin: -0.5rem 0 0 -2.5rem;
+  padding: 0.9rem 0.8rem;
+  margin-left: -3rem;
   width: 5vw;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: Linear, 135deg, from #f8bfbf, to #ee8c8c;
+}
+
+.left-side button:active, .left-side button:target, .left-side button:hover {
+  color: Linear, 135deg, from #f8bfbf, to #ee8c8c;
 }
 
 .right-side {

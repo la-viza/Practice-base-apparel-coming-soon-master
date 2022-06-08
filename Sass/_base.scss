@@ -83,26 +83,38 @@ body {
   }
 
   input {
+    position: relative;
     display: inline-flex;
     color: $color-primary-red;
     border: 1px solid $color-primary-red;
     border-radius: 5rem;
     padding: 1rem;
     width: 20vw;
+    background-color: $gradient-primary;
   }
 
   button {
+    position: absolute;
     display: inline-flex;
     border: none;
     border-radius: 2rem;
-    padding: 0.7rem 0.7rem;
-    margin: -0.5rem 0 0 -2.5rem;
+    padding: 0.9rem 0.8rem;
+    margin-left: -3rem;
     width: 5vw;
     align-content: center;
     justify-content: center;
-    background-color: $gradient-secondary;
+
+    &:active,
+    &:target,
+    &:hover {
+      color: $gradient-secondary;
+    }
+  }
+
+  button img {
   }
 }
+
 .right-side {
   background-image: url(/images/hero-desktop.jpg);
   background-size: cover;

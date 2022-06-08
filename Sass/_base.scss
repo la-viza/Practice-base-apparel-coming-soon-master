@@ -4,8 +4,13 @@ $color-soft-red: hsl(0, 93%, 68%);
 
 $color-dark-greyish-red: hsl(0, 6%, 24%);
 // GRADIENTS
-$gradient-primary: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-$gradient-secondary: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+$gradient-primary: linear-gradient
+  (135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
+$gradient-secondary: linear-gradient(
+  135deg,
+  hsl(0, 80%, 86%),
+  hsl(0, 74%, 74%)
+);
 
 // FONT VARIABLES
 $font-primary: "Josefin Sans", sans-serif;
@@ -83,35 +88,34 @@ body {
   }
 
   input {
+    background-image: $gradient-primary;
     position: relative;
     display: inline-flex;
-    color: $color-primary-red;
     border: 1px solid $color-primary-red;
     border-radius: 5rem;
     padding: 1rem;
     width: 20vw;
-    background-color: $gradient-primary;
   }
 
   button {
-    position: absolute;
-    display: inline-flex;
-    border: none;
-    border-radius: 2rem;
-    padding: 0.9rem 0.8rem;
-    margin-left: -3rem;
-    width: 5vw;
-    align-content: center;
-    justify-content: center;
-
-    &:active,
-    &:target,
-    &:hover {
-      color: $gradient-secondary;
+    &,
+    &:link,
+    &:visited {
+      position: absolute;
+      display: inline-flex;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.9rem 0.8rem;
+      margin-left: -3rem;
+      width: 5vw;
+      align-content: center;
+      justify-content: center;
+      background-image: $gradient-secondary;
     }
   }
 
   button img {
+    color: red;
   }
 }
 

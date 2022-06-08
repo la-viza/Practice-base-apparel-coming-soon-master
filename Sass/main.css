@@ -78,19 +78,18 @@ body {
 }
 
 .left-side input {
+  background-image: linear-gradient 135deg, from white, to #fff5f5;
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: #ce9797;
   border: 1px solid #ce9797;
   border-radius: 5rem;
   padding: 1rem;
   width: 20vw;
-  background-color: Linear, 135deg, from white, to #fff5f5;
 }
 
-.left-side button {
+.left-side button, .left-side button:link, .left-side button:visited {
   position: absolute;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -105,10 +104,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
 }
 
-.left-side button:active, .left-side button:target, .left-side button:hover {
-  color: Linear, 135deg, from #f8bfbf, to #ee8c8c;
+.left-side button img {
+  color: red;
 }
 
 .right-side {

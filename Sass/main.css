@@ -30,6 +30,7 @@ body {
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
+  height: 100vh;
 }
 
 .left-side {
@@ -42,6 +43,9 @@ body {
           flex-direction: column;
   padding: 3rem 7rem;
   font-family: "Josefin Sans", sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .left-side h1 {
@@ -67,6 +71,38 @@ body {
   font-size: 19px;
   width: 480px;
   line-height: 30px;
+}
+
+.left-side .left-side__text .paragraph {
+  padding: 2rem 0;
+}
+
+.left-side input {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #ce9797;
+  border: 1px solid #ce9797;
+  border-radius: 5rem;
+  padding: 1rem;
+  width: 20vw;
+}
+
+.left-side button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.7rem 0.7rem;
+  margin: -0.5rem 0 0 -2.5rem;
+  width: 5vw;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: Linear, 135deg, from #f8bfbf, to #ee8c8c;
 }
 
 .right-side {

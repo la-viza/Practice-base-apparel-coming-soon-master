@@ -43,6 +43,7 @@ body {
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
+  height: 100vh;
 }
 
 .left-side {
@@ -50,6 +51,7 @@ body {
   flex-direction: column;
   padding: 3rem 7rem;
   font-family: $font-primary;
+  justify-content: center;
 
   h1 {
     padding-top: 7rem;
@@ -74,9 +76,33 @@ body {
     font-size: 19px;
     width: 480px;
     line-height: 30px;
+
+    .paragraph {
+      padding: 2rem 0;
+    }
+  }
+
+  input {
+    display: inline-flex;
+    color: $color-primary-red;
+    border: 1px solid $color-primary-red;
+    border-radius: 5rem;
+    padding: 1rem;
+    width: 20vw;
+  }
+
+  button {
+    display: inline-flex;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem 0.7rem;
+    margin: -0.5rem 0 0 -2.5rem;
+    width: 5vw;
+    align-content: center;
+    justify-content: center;
+    background-color: $gradient-secondary;
   }
 }
-
 .right-side {
   background-image: url(/images/hero-desktop.jpg);
   background-size: cover;

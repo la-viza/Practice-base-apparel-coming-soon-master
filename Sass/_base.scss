@@ -4,13 +4,12 @@ $color-soft-red: hsl(0, 93%, 68%);
 
 $color-dark-greyish-red: hsl(0, 6%, 24%);
 // GRADIENTS
-$gradient-primary: linear-gradient
-  (135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
 $gradient-secondary: linear-gradient(
   135deg,
-  hsl(0, 80%, 86%),
-  hsl(0, 74%, 74%)
+  from hsl(0, 0%, 100%),
+  to hsl(0, 100%, 98%)
 );
+$gradient-primary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
 // FONT VARIABLES
 $font-primary: "Josefin Sans", sans-serif;
@@ -88,7 +87,6 @@ body {
   }
 
   input {
-    background-image: $gradient-primary;
     position: relative;
     display: inline-flex;
     border: 1px solid $color-primary-red;
@@ -110,6 +108,17 @@ body {
       width: 5vw;
       align-content: center;
       justify-content: center;
+      background-image: $gradient-primary;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:target {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 1rem 2rem rgba(black, 0.15);
+      transform: translate(2px);
       background-image: $gradient-secondary;
     }
   }

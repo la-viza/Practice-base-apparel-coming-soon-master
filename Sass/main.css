@@ -104,24 +104,20 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  background-color: #f1bebe;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .left-side button:hover, .left-side button:target {
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   cursor: pointer;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0.3rem 1rem 1.5rem 0.3rem #e7cbcb;
+          box-shadow: 0.3rem 1rem 1.5rem 0.3rem #e7cbcb;
   -webkit-transform: translate(2px);
           transform: translate(2px);
-  background-image: linear-gradient(135deg, from white, to #fff5f5);
-}
-
-.left-side button img {
-  color: red;
+  background-image: inherit;
+  background-color: #f1bebe;
 }
 
 .right-side {

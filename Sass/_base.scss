@@ -4,13 +4,13 @@ $color-soft-red: hsl(0, 93%, 68%);
 
 $color-dark-greyish-red: hsl(0, 6%, 24%);
 // GRADIENTS
+
+$gradient-primary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 $gradient-secondary: linear-gradient(
   135deg,
-  from hsl(0, 0%, 100%),
-  to hsl(0, 100%, 98%)
+  hsl(0, 0%, 100%),
+  hsl(0, 100%, 98%)
 );
-$gradient-primary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-
 // FONT VARIABLES
 $font-primary: "Josefin Sans", sans-serif;
 
@@ -109,22 +109,22 @@ body {
       align-content: center;
       justify-content: center;
       background-image: $gradient-primary;
+      background-color: #f1bebe;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.2s ease-out;
     }
 
     &:hover,
     &:target {
-      transition: all 0.3s ease-in-out;
       cursor: pointer;
-      box-shadow: 0 1rem 2rem rgba(black, 0.15);
+      box-shadow: 0.3rem 1rem 1.5rem 0.3rem hsl(0, 36%, 85%);
       transform: translate(2px);
-      background-image: $gradient-secondary;
+      background-image: inherit;
+      background-color: #f1bebe;
     }
-  }
 
-  button img {
-    color: red;
+    &:focus {
+    }
   }
 }
 

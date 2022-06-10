@@ -82,7 +82,7 @@ body {
     line-height: 30px;
 
     .paragraph {
-      padding: 2rem 0;
+      padding: 2rem 0 3rem;
     }
   }
 
@@ -92,10 +92,9 @@ body {
     border: 1px solid $color-primary-red;
     border-radius: 5rem;
     padding: 1rem;
-    width: 20vw;
+    width: 28vw;
     color: $color-dark-greyish-red;
     font-family: $font-primary;
-    margin-top: 1rem;
 
     &::placeholder {
       color: $color-primary-red;
@@ -123,8 +122,7 @@ body {
       border: none;
       border-radius: 2rem;
       padding: 0.9rem 0.8rem;
-      margin-left: -3rem;
-      margin-top: 1rem;
+
       width: 5vw;
       align-content: center;
       justify-content: center;
@@ -154,4 +152,27 @@ body {
   background-image: url(/images/hero-desktop.jpg);
   background-size: cover;
   object-fit: cover;
+}
+
+form {
+  position: relative;
+
+  p {
+    display: none;
+    visibility: hidden;
+    color: var(--Soft-Red);
+    font-weight: 600;
+    margin-left: 30px;
+
+    &.error {
+      display: block;
+    }
+  }
+
+  .iconError {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 110px;
+  }
 }

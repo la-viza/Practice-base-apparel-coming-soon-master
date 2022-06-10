@@ -74,7 +74,7 @@ body {
 }
 
 .left-side .left-side__text .paragraph {
-  padding: 2rem 0;
+  padding: 2rem 0 3rem;
 }
 
 .left-side input {
@@ -85,10 +85,9 @@ body {
   border: 1px solid #ce9797;
   border-radius: 5rem;
   padding: 1rem;
-  width: 20vw;
+  width: 28vw;
   color: #413a3a;
   font-family: "Josefin Sans", sans-serif;
-  margin-top: 1rem;
 }
 
 .left-side input::-webkit-input-placeholder {
@@ -133,8 +132,6 @@ body {
   border: none;
   border-radius: 2rem;
   padding: 0.9rem 0.8rem;
-  margin-left: -3rem;
-  margin-top: 1rem;
   width: 5vw;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -168,5 +165,28 @@ body {
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+form {
+  position: relative;
+}
+
+form p {
+  display: none;
+  visibility: hidden;
+  color: var(--Soft-Red);
+  font-weight: 600;
+  margin-left: 30px;
+}
+
+form p.error {
+  display: block;
+}
+
+form .iconError {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 110px;
 }
 /*# sourceMappingURL=main.css.map */

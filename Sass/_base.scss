@@ -155,18 +155,12 @@ body {
 }
 
 form {
-  position: relative;
-
   p {
     display: none;
     visibility: hidden;
     color: var(--Soft-Red);
     font-weight: 600;
     margin-left: 30px;
-
-    &.error {
-      display: block;
-    }
   }
 
   .iconError {
@@ -174,5 +168,9 @@ form {
     position: absolute;
     top: 15px;
     right: 110px;
+  }
+
+  .error {
+    display: block;
   }
 }

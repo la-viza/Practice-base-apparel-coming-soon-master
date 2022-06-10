@@ -167,10 +167,6 @@ body {
      object-fit: cover;
 }
 
-form {
-  position: relative;
-}
-
 form p {
   display: none;
   visibility: hidden;
@@ -179,14 +175,14 @@ form p {
   margin-left: 30px;
 }
 
-form p.error {
-  display: block;
-}
-
 form .iconError {
   display: none;
   position: absolute;
   top: 15px;
   right: 110px;
+}
+
+form .error {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */

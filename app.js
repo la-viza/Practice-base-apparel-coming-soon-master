@@ -1,5 +1,5 @@
-const form = document.getElementById("form");
-const email = document.getElementById("email");
+let form = document.getElementById("form");
+let email = document.getElementById("email");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

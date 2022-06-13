@@ -87,17 +87,18 @@ body {
   }
 
   input {
+    display: inline-flex;
     position: relative;
     border: 1px solid $color-primary-red;
     border-radius: 5rem;
     padding: 1rem;
-    width: 20vw;
+    width: 28vw;
     color: $color-dark-greyish-red;
     font-family: $font-primary;
 
     &::placeholder {
       color: $color-primary-red;
-      font-size: 1 rem;
+      font-size: 1rem;
       font-family: $font-primary;
     }
 
@@ -112,9 +113,33 @@ body {
     }
   }
 
+  form.error-icon {
+    visibility: hidden;
+  }
+
+  form.error .error-icon {
+    display: inline-block;
+    visibility: visible;
+    position: absolute;
+    margin-left: -5rem;
+    margin-top: 0.5rem;
+  }
+
+  .text {
+    visibility: hidden;
+  }
+
+  form.error p {
+    display: block;
+    visibility: visible;
+    color: var(--Soft-Red);
+    font-weight: 600;
+  }
+
   button {
     &,
     &:link,
+    &:before,
     &:visited {
       position: absolute;
       display: inline-flex;
@@ -129,6 +154,7 @@ body {
       background-color: #f1bebe;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
+      margin-left: -3rem;
     }
 
     &:hover,
@@ -151,22 +177,4 @@ body {
   background-image: url(/images/hero-desktop.jpg);
   background-size: cover;
   object-fit: cover;
-}
-
-form {
-  .input-form {
-    display: inline-flex;
-  }
-
-  p {
-    color: var(--Soft-Red);
-    font-weight: 600;
-    margin-left: 30px;
-  }
-
-  img .error-icon {
-    width: 100%;
-    height: 100%;
-    text-align: right;
-  }
 }

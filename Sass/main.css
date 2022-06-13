@@ -78,36 +78,39 @@ body {
 }
 
 .left-side input {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   position: relative;
   border: 1px solid #ce9797;
   border-radius: 5rem;
   padding: 1rem;
-  width: 20vw;
+  width: 28vw;
   color: #413a3a;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .left-side input::-webkit-input-placeholder {
   color: #ce9797;
-  font-size: 1 rem;
+  font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .left-side input:-ms-input-placeholder {
   color: #ce9797;
-  font-size: 1 rem;
+  font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .left-side input::-ms-input-placeholder {
   color: #ce9797;
-  font-size: 1 rem;
+  font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .left-side input::placeholder {
   color: #ce9797;
-  font-size: 1 rem;
+  font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -121,7 +124,30 @@ body {
   outline: #f96262;
 }
 
-.left-side button, .left-side button:link, .left-side button:visited {
+.left-side form.error-icon {
+  visibility: hidden;
+}
+
+.left-side form.error .error-icon {
+  display: inline-block;
+  visibility: visible;
+  position: absolute;
+  margin-left: -5rem;
+  margin-top: 0.5rem;
+}
+
+.left-side .text {
+  visibility: hidden;
+}
+
+.left-side form.error p {
+  display: block;
+  visibility: visible;
+  color: var(--Soft-Red);
+  font-weight: 600;
+}
+
+.left-side button, .left-side button:link, .left-side button:before, .left-side button:visited {
   position: absolute;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -140,6 +166,7 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  margin-left: -3rem;
 }
 
 .left-side button:hover, .left-side button:target {
@@ -162,23 +189,5 @@ body {
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-form .input-form {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-form p {
-  color: var(--Soft-Red);
-  font-weight: 600;
-  margin-left: 30px;
-}
-
-form img .error-icon {
-  width: 100%;
-  height: 100%;
-  text-align: right;
 }
 /*# sourceMappingURL=main.css.map */

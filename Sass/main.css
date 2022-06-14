@@ -48,12 +48,24 @@ body {
           justify-content: center;
 }
 
+@media only screen and (max-width: 50em) {
+  .left-side {
+    padding: 3rem 4rem;
+  }
+}
+
 .left-side h1 {
   padding-top: 7rem;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 4.5rem;
   line-height: 1.1em;
   letter-spacing: 0.9rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .left-side h1 {
+    font-size: 3rem;
+  }
 }
 
 .left-side h1 .pink {
@@ -68,9 +80,15 @@ body {
 
 .left-side .left-side__text {
   color: #ce9797;
-  font-size: 19px;
-  width: 480px;
-  line-height: 30px;
+  font-size: 1.2rem;
+  width: 33rem;
+  line-height: 1.8rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .left-side .left-side__text {
+    width: 20rem;
+  }
 }
 
 .left-side .left-side__text .paragraph {

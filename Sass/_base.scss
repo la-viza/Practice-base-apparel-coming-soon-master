@@ -57,12 +57,20 @@ body {
   font-family: $font-primary;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem 4rem;
+  }
+
   h1 {
     padding-top: 7rem;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 4.5rem;
     line-height: 1.1em;
     letter-spacing: 0.9rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 3rem;
+    }
 
     .pink {
       color: $color-primary-red;
@@ -77,9 +85,13 @@ body {
 
   .left-side__text {
     color: $color-primary-red;
-    font-size: 19px;
-    width: 480px;
-    line-height: 30px;
+    font-size: 1.2rem;
+    width: 33rem;
+    line-height: 1.8rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 20rem;
+    }
 
     .paragraph {
       padding: 2rem 0 3rem;

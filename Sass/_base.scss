@@ -113,7 +113,7 @@ body {
     }
   }
 
-  form.error-icon {
+  .error-icon {
     visibility: hidden;
   }
 
@@ -121,8 +121,8 @@ body {
     display: inline-block;
     visibility: visible;
     position: absolute;
-    margin-left: -5rem;
-    margin-top: 0.5rem;
+    margin-left: -7rem;
+    margin-top: 0.7rem;
   }
 
   .text {
@@ -137,6 +137,8 @@ body {
   }
 
   button {
+    margin-left: -5rem;
+
     &,
     &:link,
     &:before,
@@ -146,7 +148,6 @@ body {
       border: none;
       border-radius: 2rem;
       padding: 0.9rem 0.8rem;
-
       width: 5vw;
       align-content: center;
       justify-content: center;
@@ -154,19 +155,18 @@ body {
       background-color: #f1bebe;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
-      margin-left: -3rem;
     }
 
     &:hover,
     &:target {
       cursor: pointer;
       box-shadow: 0.3rem 1rem 1.5rem 0.3rem hsl(0, 36%, 85%);
-      transform: translate(2px);
       background-image: inherit;
       background-color: #f8d2d2;
     }
 
-    &:focus {
+    &:focus,
+    &:focus-visible {
       border: 2px solid $color-soft-red;
       outline: $color-soft-red;
     }

@@ -124,7 +124,7 @@ body {
   outline: #f96262;
 }
 
-.left-side form.error-icon {
+.left-side .error-icon {
   visibility: hidden;
 }
 
@@ -132,8 +132,8 @@ body {
   display: inline-block;
   visibility: visible;
   position: absolute;
-  margin-left: -5rem;
-  margin-top: 0.5rem;
+  margin-left: -7rem;
+  margin-top: 0.7rem;
 }
 
 .left-side .text {
@@ -145,6 +145,10 @@ body {
   visibility: visible;
   color: var(--Soft-Red);
   font-weight: 600;
+}
+
+.left-side button {
+  margin-left: -5rem;
 }
 
 .left-side button, .left-side button:link, .left-side button:before, .left-side button:visited {
@@ -166,20 +170,17 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  margin-left: -3rem;
 }
 
 .left-side button:hover, .left-side button:target {
   cursor: pointer;
   -webkit-box-shadow: 0.3rem 1rem 1.5rem 0.3rem #e7cbcb;
           box-shadow: 0.3rem 1rem 1.5rem 0.3rem #e7cbcb;
-  -webkit-transform: translate(2px);
-          transform: translate(2px);
   background-image: inherit;
   background-color: #f8d2d2;
 }
 
-.left-side button:focus {
+.left-side button:focus, .left-side button:focus-visible {
   border: 2px solid #f96262;
   outline: #f96262;
 }

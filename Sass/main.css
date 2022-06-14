@@ -150,9 +150,15 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+@media only screen and (max-width: 50em) {
+  .left-side input {
+    min-width: 35vw;
+  }
+}
+
 @media only screen and (max-width: 37.5em) {
   .left-side input {
-    min-width: 50vw;
+    min-width: 40vw;
   }
 }
 
@@ -180,12 +186,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.left-side input:hover {
-  border: 2px solid #f96262;
-  outline: #f96262;
-}
-
-.left-side input:focus {
+.left-side input:hover, .left-side input:focus {
   border: 2px solid #f96262;
   outline: #f96262;
 }
@@ -194,12 +195,12 @@ body {
   visibility: hidden;
 }
 
-.left-side form.error .error-icon {
+.left-side form.error .error-icon .email {
   display: inline-block;
   visibility: visible;
   position: absolute;
-  margin-left: -7rem;
   margin-top: 0.7rem;
+  margin-left: -10rem;
 }
 
 .left-side .text {
@@ -207,17 +208,18 @@ body {
 }
 
 .left-side form.error p {
+  position: absolute;
   display: block;
   visibility: visible;
-  color: var(--Soft-Red);
+  color: #f96262;
   font-weight: 600;
+  font-size: 1rem;
 }
 
 .left-side button {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin-left: -5rem;
-}
-
-.left-side button, .left-side button:link, .left-side button:before, .left-side button:visited {
   position: absolute;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -234,19 +236,18 @@ body {
   background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   background-color: #f1bebe;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
-.left-side button:hover, .left-side button:target {
+.left-side button:hover {
   cursor: pointer;
   -webkit-box-shadow: 0.3rem 1rem 1.5rem 0.3rem #e7cbcb;
           box-shadow: 0.3rem 1rem 1.5rem 0.3rem #e7cbcb;
   background-image: inherit;
   background-color: #f8d2d2;
+  outline: none;
 }
 
-.left-side button:focus, .left-side button:focus-visible {
+.left-side button:focus-visible {
   border: 2px solid #f96262;
   outline: #f96262;
 }
@@ -271,7 +272,7 @@ body {
   }
 }
 
-.footer {
+footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -19,6 +19,7 @@ $bp-largest: 75em; // 1200px/16px
 $bp-large: 62.5em; // 1000px/16
 $bp-medium: 50em; // 800px/16
 $bp-small: 37.5em; // 600px/16
+$bp-smallest: 28.125em; // 450/16
 
 *,
 *::before,
@@ -33,6 +34,10 @@ html {
   padding: 0;
   max-height: 100vh;
   overflow: hidden;
+
+  @media only screen and (max-width: $bp-small) {
+    overflow: scroll;
+  }
 }
 body {
   height: 100%;
@@ -40,6 +45,12 @@ body {
 .container {
   display: grid;
   grid-template-columns: 60% 40%;
+
+  @media only screen and (max-width: $bp-small) {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+  }
 }
 
 .left {
@@ -60,6 +71,16 @@ body {
   @media only screen and (max-width: $bp-medium) {
     padding: 3rem 4rem;
   }
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1.5rem 2rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    background-image: url(/images/hero-mobile.jpg);
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: top 5rem right 0rem;
+  }
 
   h1 {
     padding-top: 7rem;
@@ -70,6 +91,10 @@ body {
 
     @media only screen and (max-width: $bp-largest) {
       font-size: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding-top: 25rem;
     }
 
     .pink {
@@ -91,6 +116,8 @@ body {
 
     @media only screen and (max-width: $bp-largest) {
       width: 20rem;
+      text-align: center;
+      padding-left: 2rem;
     }
 
     .paragraph {
@@ -107,6 +134,10 @@ body {
     width: 28vw;
     color: $color-dark-greyish-red;
     font-family: $font-primary;
+
+    @media only screen and (max-width: $bp-small) {
+      min-width: 50vw;
+    }
 
     &::placeholder {
       color: $color-primary-red;
@@ -189,4 +220,19 @@ body {
   background-image: url(/images/hero-desktop.jpg);
   background-size: cover;
   object-fit: cover;
+
+  @media only screen and (max-width: $bp-largest) {
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  @media only screen and (max-width: $bp-small) {
+    background-image: none;
+  }
+}
+
+.footer {
+  display: flex;
+  margin-bottom: -20rem;
+  font-size: 1rem;
+  text-align: center;
 }

@@ -150,18 +150,6 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
-@media only screen and (max-width: 50em) {
-  .left-side input {
-    min-width: 35vw;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .left-side input {
-    min-width: 40vw;
-  }
-}
-
 .left-side input::-webkit-input-placeholder {
   color: #ce9797;
   font-size: 1rem;
@@ -195,12 +183,15 @@ body {
   visibility: hidden;
 }
 
+.left-side .error .error-icon {
+  display: inline-block;
+  visibility: visible;
+}
+
 .left-side form.error .error-icon .email {
   display: inline-block;
   visibility: visible;
   position: absolute;
-  margin-top: 0.7rem;
-  margin-left: -10rem;
 }
 
 .left-side .text {
@@ -236,6 +227,12 @@ body {
   background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   background-color: #f1bebe;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 75em) {
+  .left-side button {
+    margin-left: -3rem;
+  }
 }
 
 .left-side button:hover {

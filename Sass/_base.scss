@@ -135,14 +135,6 @@ body {
     color: $color-dark-greyish-red;
     font-family: $font-primary;
 
-    @media only screen and (max-width: $bp-medium) {
-      min-width: 35vw;
-    }
-
-    @media only screen and (max-width: $bp-small) {
-      min-width: 40vw;
-    }
-
     &::placeholder {
       color: $color-primary-red;
       font-size: 1rem;
@@ -160,12 +152,23 @@ body {
     visibility: hidden;
   }
 
+  .error .error-icon {
+    display: inline-block;
+    visibility: visible;
+
+    @media only screen and (max-width: $bp-largest) {
+      //  margin-right: 5rem !important;
+    }
+  }
+
   form.error .error-icon .email {
     display: inline-block;
     visibility: visible;
     position: absolute;
-    margin-top: 0.7rem;
-    margin-left: -10rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      //  margin-right: 5rem !important;
+    }
   }
 
   .text {
@@ -195,6 +198,10 @@ body {
     background-image: $gradient-primary;
     background-color: #f1bebe;
     cursor: pointer;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin-left: -3rem;
+    }
 
     &:hover {
       cursor: pointer;

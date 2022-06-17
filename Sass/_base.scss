@@ -32,7 +32,7 @@ $bp-smallest: 28.125em; // 450/16
 html {
   margin: 0;
   padding: 0;
-  max-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 
   @media only screen and (max-width: $bp-small) {
@@ -40,7 +40,7 @@ html {
   }
 }
 body {
-  height: 100%;
+  height: 100vh;
 }
 .container {
   display: grid;
@@ -64,28 +64,26 @@ body {
 .left-side {
   display: flex;
   flex-direction: column;
-  padding: 3rem 5rem 3rem 9rem;
+  padding: 4rem 5rem 3rem 9rem;
   font-family: $font-primary;
-  justify-content: center;
+  justify-content: left;
 
   @media only screen and (max-width: $bp-medium) {
     padding: 3rem 4rem;
   }
-  @media only screen and (max-width: $bp-medium) {
-    padding: 1.5rem 2rem;
-  }
+
   @media only screen and (max-width: $bp-small) {
     background-image: url(/images/hero-mobile.jpg);
     background-size: 100%;
     object-fit: cover;
     background-repeat: no-repeat;
-    background-position: top 5rem right 0rem;
+    background-position: top 7rem right 0rem;
   }
 
   h1 {
-    padding-top: 7rem;
+    padding-top: 15rem;
     text-transform: uppercase;
-    font-size: 4.5rem;
+    font-size: 6rem;
     line-height: 1.1em;
     letter-spacing: 0.9rem;
 
@@ -94,7 +92,7 @@ body {
     }
 
     @media only screen and (max-width: $bp-small) {
-      padding-top: 25rem;
+      padding-top: 28rem;
     }
 
     .pink {
@@ -110,7 +108,7 @@ body {
 
   .left-side__text {
     color: $color-primary-red;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     width: 33rem;
     line-height: 1.8rem;
 
@@ -121,7 +119,11 @@ body {
     }
 
     .paragraph {
-      padding: 2rem 0 3rem;
+      padding: 4rem 0 3.5rem;
+
+      @media only screen and (max-width: $bp-small) {
+        padding-top: 3rem;
+      }
     }
   }
 
@@ -131,9 +133,13 @@ body {
     border: 1px solid $color-primary-red;
     border-radius: 5rem;
     padding: 1rem;
-    width: 28vw;
+    min-width: 23vw;
     color: $color-dark-greyish-red;
     font-family: $font-primary;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 50vw;
+    }
 
     &::placeholder {
       color: $color-primary-red;
@@ -156,8 +162,8 @@ body {
     display: inline-block;
     visibility: visible;
 
-    @media only screen and (max-width: $bp-largest) {
-      //  margin-right: 5rem !important;
+    @media only screen and (max-width: $bp-medium) {
+      margin-left: -5rem !important;
     }
   }
 
@@ -165,10 +171,6 @@ body {
     display: inline-block;
     visibility: visible;
     position: absolute;
-
-    @media only screen and (max-width: $bp-largest) {
-      //  margin-right: 5rem !important;
-    }
   }
 
   .text {
@@ -182,6 +184,10 @@ body {
     color: $color-soft-red;
     font-weight: 600;
     font-size: 1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-left: 3rem !important;
+    }
   }
 
   button {
@@ -220,7 +226,7 @@ body {
 
 .right-side {
   background-image: url(/images/hero-desktop.jpg);
-  background-size: cover;
+  background-size: 100vh;
   object-fit: cover;
 
   @media only screen and (max-width: $bp-largest) {
@@ -230,11 +236,11 @@ body {
   @media only screen and (max-width: $bp-small) {
     background-image: none;
   }
-}
 
-footer {
-  display: flex;
-  margin-bottom: -20rem;
-  font-size: 1rem;
-  text-align: center;
+  .footer {
+    display: flex;
+    bottom: -20rem;
+    font-size: 1rem;
+    text-align: center;
+  }
 }

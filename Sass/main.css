@@ -10,7 +10,7 @@
 html {
   margin: 0;
   padding: 0;
-  max-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  height: 100%;
+  height: 100vh;
 }
 
 .container {
@@ -58,22 +58,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 3rem 5rem 3rem 9rem;
+  padding: 4rem 5rem 3rem 9rem;
   font-family: "Josefin Sans", sans-serif;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 @media only screen and (max-width: 50em) {
   .left-side {
     padding: 3rem 4rem;
-  }
-}
-
-@media only screen and (max-width: 50em) {
-  .left-side {
-    padding: 1.5rem 2rem;
   }
 }
 
@@ -84,14 +78,14 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
     background-repeat: no-repeat;
-    background-position: top 5rem right 0rem;
+    background-position: top 7rem right 0rem;
   }
 }
 
 .left-side h1 {
-  padding-top: 7rem;
+  padding-top: 15rem;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 6rem;
   line-height: 1.1em;
   letter-spacing: 0.9rem;
 }
@@ -104,7 +98,7 @@ body {
 
 @media only screen and (max-width: 37.5em) {
   .left-side h1 {
-    padding-top: 25rem;
+    padding-top: 28rem;
   }
 }
 
@@ -120,7 +114,7 @@ body {
 
 .left-side .left-side__text {
   color: #ce9797;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   width: 33rem;
   line-height: 1.8rem;
 }
@@ -134,7 +128,13 @@ body {
 }
 
 .left-side .left-side__text .paragraph {
-  padding: 2rem 0 3rem;
+  padding: 4rem 0 3.5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .left-side .left-side__text .paragraph {
+    padding-top: 3rem;
+  }
 }
 
 .left-side input {
@@ -145,9 +145,15 @@ body {
   border: 1px solid #ce9797;
   border-radius: 5rem;
   padding: 1rem;
-  width: 28vw;
+  min-width: 23vw;
   color: #413a3a;
   font-family: "Josefin Sans", sans-serif;
+}
+
+@media only screen and (max-width: 50em) {
+  .left-side input {
+    width: 50vw;
+  }
 }
 
 .left-side input::-webkit-input-placeholder {
@@ -188,6 +194,12 @@ body {
   visibility: visible;
 }
 
+@media only screen and (max-width: 50em) {
+  .left-side .error .error-icon {
+    margin-left: -5rem !important;
+  }
+}
+
 .left-side form.error .error-icon .email {
   display: inline-block;
   visibility: visible;
@@ -205,6 +217,12 @@ body {
   color: #f96262;
   font-weight: 600;
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .left-side form.error p {
+    margin-left: 3rem !important;
+  }
 }
 
 .left-side button {
@@ -251,7 +269,7 @@ body {
 
 .right-side {
   background-image: url(/images/hero-desktop.jpg);
-  background-size: cover;
+  background-size: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -269,11 +287,11 @@ body {
   }
 }
 
-footer {
+.right-side .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: -20rem;
+  bottom: -20rem;
   font-size: 1rem;
   text-align: center;
 }

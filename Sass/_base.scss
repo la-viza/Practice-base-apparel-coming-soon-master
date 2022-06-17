@@ -15,9 +15,9 @@ $gradient-secondary: linear-gradient(
 $font-primary: "Josefin Sans", sans-serif;
 
 // RESPONSIVE BREAKPOINTS
-$bp-largest: 75em; // 1200px/16px
+$bp-largest: 81.25em; // 1300px/16px
 $bp-large: 62.5em; // 1000px/16
-$bp-medium: 50em; // 800px/16
+$bp-medium: 51.25em; // 820px/16
 $bp-small: 37.5em; // 600px/16
 $bp-smallest: 28.125em; // 450/16
 
@@ -46,6 +46,11 @@ body {
 .container {
   display: grid;
   grid-template-columns: 60% 40%;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 
   @media only screen and (max-width: $bp-small) {
     display: grid;
@@ -123,6 +128,11 @@ body {
     width: 30rem;
     line-height: 1.8rem;
 
+    @media only screen and (max-width: $bp-large) {
+      width: 26rem;
+      font-size: 1.4rem;
+    }
+
     @media only screen and (max-width: $bp-medium) {
       width: 20rem;
       font-size: 1rem;
@@ -136,6 +146,10 @@ body {
 
     .paragraph {
       padding: 2.5rem 0 2rem;
+
+      @media only screen and (max-width: $bp-large) {
+        padding: 4rem 0;
+      }
 
       @media only screen and (max-width: $bp-small) {
         padding-top: 2rem;
@@ -152,8 +166,12 @@ body {
     color: $color-dark-greyish-red;
     font-family: $font-primary;
 
+    @media only screen and (max-width: $bp-large) {
+      width: 40vw;
+    }
+
     @media only screen and (max-width: $bp-medium) {
-      width: 35vw;
+      width: 30vw;
     }
     @media only screen and (max-width: $bp-small) {
       width: 45vw;
@@ -245,22 +263,36 @@ body {
 
 .right-side {
   background-image: url(/images/hero-desktop.jpg);
-  background-size: 100vh;
   object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100vh;
 
   @media only screen and (max-width: $bp-largest) {
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 80vh;
   }
 
   @media only screen and (max-width: $bp-small) {
     background-image: none;
   }
+}
 
-  .footer {
-    display: flex;
-    bottom: -20rem;
-    font-size: 1rem;
-    text-align: center;
+.footer {
+  color: $color-dark-greyish-red;
+  text-align: center;
+  font-size: 0.7rem;
+  font-family: $font-primary;
+
+  &__links {
+    color: $color-primary-red;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-soft-red;
+    }
   }
 }

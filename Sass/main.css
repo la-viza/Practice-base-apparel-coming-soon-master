@@ -14,7 +14,7 @@ html {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 50em) {
   html {
     overflow: scroll;
   }
@@ -37,8 +37,8 @@ body {
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 30% 70%;
-        grid-template-rows: 30% 70%;
+    -ms-grid-rows: 25% 75%;
+        grid-template-rows: 25% 75%;
   }
 }
 
@@ -58,7 +58,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 4rem 5rem 3rem 9rem;
+  padding: 4rem 5rem 4rem 5rem;
   font-family: "Josefin Sans", sans-serif;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
@@ -67,7 +67,7 @@ body {
 
 @media only screen and (max-width: 50em) {
   .left-side {
-    padding: 3rem 4rem;
+    padding: 3rem 4rem 3.5rem 4rem;
   }
 }
 
@@ -78,14 +78,21 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
     background-repeat: no-repeat;
-    background-position: top 7rem right 0rem;
+    background-position: top 6rem right 0;
+    padding: 2rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .left-side {
+    padding: 2.5rem;
   }
 }
 
 .left-side h1 {
-  padding-top: 15rem;
+  padding-top: 5rem;
   text-transform: uppercase;
-  font-size: 6rem;
+  font-size: 4.5rem;
   line-height: 1.1em;
   letter-spacing: 0.9rem;
 }
@@ -98,7 +105,15 @@ body {
 
 @media only screen and (max-width: 37.5em) {
   .left-side h1 {
-    padding-top: 28rem;
+    padding-top: 27rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .left-side h1 {
+    padding-top: 21rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -112,28 +127,35 @@ body {
   font-weight: 400;
 }
 
-.left-side .left-side__text {
+.left-side__text {
   color: #ce9797;
-  font-size: 1.5rem;
-  width: 33rem;
+  font-size: 1.2rem;
+  width: 30rem;
   line-height: 1.8rem;
 }
 
-@media only screen and (max-width: 75em) {
-  .left-side .left-side__text {
+@media only screen and (max-width: 50em) {
+  .left-side__text {
     width: 20rem;
-    text-align: center;
-    padding-left: 2rem;
+    font-size: 1rem;
   }
 }
 
-.left-side .left-side__text .paragraph {
-  padding: 4rem 0 3.5rem;
+@media only screen and (max-width: 37.5em) {
+  .left-side__text {
+    width: 20rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+.left-side__text .paragraph {
+  padding: 2.5rem 0 2rem;
 }
 
 @media only screen and (max-width: 37.5em) {
-  .left-side .left-side__text .paragraph {
-    padding-top: 3rem;
+  .left-side__text .paragraph {
+    padding-top: 2rem;
   }
 }
 
@@ -145,14 +167,20 @@ body {
   border: 1px solid #ce9797;
   border-radius: 5rem;
   padding: 1rem;
-  min-width: 23vw;
+  min-width: 25vw;
   color: #413a3a;
   font-family: "Josefin Sans", sans-serif;
 }
 
 @media only screen and (max-width: 50em) {
   .left-side input {
-    width: 50vw;
+    width: 35vw;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .left-side input {
+    width: 45vw;
   }
 }
 
@@ -236,7 +264,7 @@ body {
   border: none;
   border-radius: 2rem;
   padding: 0.9rem 0.8rem;
-  width: 5vw;
+  width: 6vw;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;

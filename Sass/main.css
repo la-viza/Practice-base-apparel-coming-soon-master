@@ -162,6 +162,7 @@ body {
     width: 20rem;
     text-align: center;
     font-size: 1rem;
+    margin: 0 auto;
   }
 }
 
@@ -325,11 +326,9 @@ body {
 
 .right-side {
   background-image: url(/images/hero-desktop.jpg);
-  -o-object-fit: cover;
-     object-fit: cover;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-size: 100vh;
+  background-size: cover;
+  background-position: center center;
 }
 
 @media only screen and (max-width: 81.25em) {
@@ -362,5 +361,11 @@ body {
 .footer__links:hover {
   cursor: pointer;
   color: #f96262;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    margin-top: 17rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

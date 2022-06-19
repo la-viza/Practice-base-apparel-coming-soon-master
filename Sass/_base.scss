@@ -142,6 +142,7 @@ body {
       width: 20rem;
       text-align: center;
       font-size: 1rem;
+      margin: 0 auto;
     }
 
     .paragraph {
@@ -263,10 +264,9 @@ body {
 
 .right-side {
   background-image: url(/images/hero-desktop.jpg);
-  object-fit: cover;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-size: 100vh;
+  background-size: cover;
+  background-position: center center;
 
   @media only screen and (max-width: $bp-largest) {
     background-position: center;
@@ -294,5 +294,9 @@ body {
       cursor: pointer;
       color: $color-soft-red;
     }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 17rem;
   }
 }

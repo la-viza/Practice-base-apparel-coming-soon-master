@@ -1,15 +1,15 @@
 // COLOR VARIABLES
-$color-primary-red: hsl(0, 36%, 70%);
-$color-soft-red: hsl(0, 93%, 68%);
+$color-primary-green: #2e8540;
+$color-soft-red: #ff5d6e;
 
 $color-dark-greyish-red: hsl(0, 6%, 24%);
 // GRADIENTS
 
-$gradient-primary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+$gradient-primary: linear-gradient(135deg, #feffea, #537451);
 $gradient-secondary: linear-gradient(
   135deg,
-  hsl(0, 0%, 100%),
-  hsl(0, 100%, 98%)
+  hsl(157, 73%, 96%),
+  hsl(111, 78%, 95%)
 );
 // FONT VARIABLES
 $font-primary: "Josefin Sans", sans-serif;
@@ -45,11 +45,11 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 65% 35%;
 
   @media only screen and (max-width: $bp-medium) {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -60,11 +60,12 @@ body {
 }
 
 .left {
-  background-image: url(/images/bg-pattern-desktop.jpg);
+  background-image: url(/images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
   height: 100vh;
+  width: 120%;
 }
 
 .left-side {
@@ -74,25 +75,28 @@ body {
   font-family: $font-primary;
   justify-content: left;
 
+  @media only screen and (max-width: $bp-largest) {
+    padding: 3rem 4rem 3.5rem 4rem;
+  }
+
   @media only screen and (max-width: $bp-medium) {
     padding: 3rem 4rem 3.5rem 4rem;
   }
 
   @media only screen and (max-width: $bp-small) {
-    background-image: url(/images/hero-mobile.jpg);
+    background-image: url(/images/plants-mobile.jpg);
     background-size: 100%;
     object-fit: cover;
     background-repeat: no-repeat;
-    background-position: top 6rem right 0;
-    padding: 2rem 1rem;
+    background-position: top 7rem right 0;
   }
 
   @media only screen and (max-width: $bp-smallest) {
-    padding: 2.5rem;
+    overflow: hidden;
   }
 
   h1 {
-    padding-top: 5rem;
+    padding-top: 4rem;
     text-transform: uppercase;
     font-size: 4.5rem;
     line-height: 1.1em;
@@ -111,8 +115,8 @@ body {
       padding-top: 21rem;
       font-size: 1.8rem;
     }
-    .pink {
-      color: $color-primary-red;
+    .green {
+      color: $color-primary-green;
       font-weight: 300;
     }
 
@@ -123,7 +127,7 @@ body {
   }
 
   &__text {
-    color: $color-primary-red;
+    color: $color-primary-green;
     font-size: 1.2rem;
     width: 30rem;
     line-height: 1.8rem;
@@ -146,7 +150,7 @@ body {
     }
 
     .paragraph {
-      padding: 2.5rem 0 2rem;
+      padding: 2rem 0 2.5rem;
 
       @media only screen and (max-width: $bp-large) {
         padding: 4rem 0;
@@ -160,15 +164,15 @@ body {
   input {
     display: inline-flex;
     position: relative;
-    border: 1px solid $color-primary-red;
+    border: 1px solid $color-primary-green;
     border-radius: 5rem;
     padding: 1rem;
-    min-width: 25vw;
+    width: 30vw;
     color: $color-dark-greyish-red;
     font-family: $font-primary;
 
     @media only screen and (max-width: $bp-large) {
-      width: 40vw;
+      width: 35vw;
     }
 
     @media only screen and (max-width: $bp-medium) {
@@ -179,15 +183,15 @@ body {
     }
 
     &::placeholder {
-      color: $color-primary-red;
+      color: $color-primary-green;
       font-size: 1rem;
       font-family: $font-primary;
     }
 
     &:hover,
     &:focus {
-      border: 2px solid $color-soft-red;
-      outline: $color-soft-red;
+      border: 2px solid $color-primary-green;
+      outline: $color-primary-green;
     }
   }
 
@@ -219,7 +223,7 @@ body {
     position: absolute;
     display: block;
     visibility: visible;
-    color: $color-soft-red;
+    color: #d35400;
     font-weight: 600;
     font-size: 1rem;
 
@@ -240,7 +244,7 @@ body {
     align-content: center;
     justify-content: center;
     background-image: $gradient-primary;
-    background-color: #f1bebe;
+    background-color: #a3de83;
     cursor: pointer;
 
     @media only screen and (max-width: $bp-largest) {
@@ -249,30 +253,29 @@ body {
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0.3rem 1rem 1.5rem 0.3rem hsl(0, 36%, 85%);
+      box-shadow: 0.3rem 1rem 1.5rem 0.3rem #a3de8380;
       background-image: inherit;
-      background-color: #f8d2d2;
+      background-color: #a3de83;
       outline: none;
     }
 
     &:focus-visible {
-      border: 2px solid $color-soft-red;
-      outline: $color-soft-red;
+      border: 2px solid #d35400;
+      outline: #d35400;
     }
   }
 }
 
 .right-side {
-  background-image: url(/images/hero-desktop.jpg);
-  background-repeat: no-repeat;
+  background-image: url(/images/pexels-element-digital-1470171.jpg);
+  background-repeat: repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: right;
 
   @media only screen and (max-width: $bp-largest) {
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 80vh;
+    background-size: cover;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -287,12 +290,12 @@ body {
   font-family: $font-primary;
 
   &__links {
-    color: $color-primary-red;
+    color: $color-primary-green;
     text-decoration: none;
 
     &:hover {
       cursor: pointer;
-      color: $color-soft-red;
+      color: #d35400;
     }
   }
 

@@ -27,16 +27,16 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
+  -ms-grid-columns: 65% 35%;
+      grid-template-columns: 65% 35%;
 }
 
 @media only screen and (max-width: 51.25em) {
   .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
   }
 }
 
@@ -52,11 +52,12 @@ body {
 }
 
 .left {
-  background-image: url(/images/bg-pattern-desktop.jpg);
+  background-image: url(/images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
   height: 100vh;
+  width: 120%;
 }
 
 .left-side {
@@ -74,6 +75,12 @@ body {
           justify-content: left;
 }
 
+@media only screen and (max-width: 81.25em) {
+  .left-side {
+    padding: 3rem 4rem 3.5rem 4rem;
+  }
+}
+
 @media only screen and (max-width: 51.25em) {
   .left-side {
     padding: 3rem 4rem 3.5rem 4rem;
@@ -82,24 +89,23 @@ body {
 
 @media only screen and (max-width: 37.5em) {
   .left-side {
-    background-image: url(/images/hero-mobile.jpg);
+    background-image: url(/images/plants-mobile.jpg);
     background-size: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     background-repeat: no-repeat;
-    background-position: top 6rem right 0;
-    padding: 2rem 1rem;
+    background-position: top 7rem right 0;
   }
 }
 
 @media only screen and (max-width: 28.125em) {
   .left-side {
-    padding: 2.5rem;
+    overflow: hidden;
   }
 }
 
 .left-side h1 {
-  padding-top: 5rem;
+  padding-top: 4rem;
   text-transform: uppercase;
   font-size: 4.5rem;
   line-height: 1.1em;
@@ -126,8 +132,8 @@ body {
   }
 }
 
-.left-side h1 .pink {
-  color: #ce9797;
+.left-side h1 .green {
+  color: #2e8540;
   font-weight: 300;
 }
 
@@ -137,7 +143,7 @@ body {
 }
 
 .left-side__text {
-  color: #ce9797;
+  color: #2e8540;
   font-size: 1.2rem;
   width: 30rem;
   line-height: 1.8rem;
@@ -167,7 +173,7 @@ body {
 }
 
 .left-side__text .paragraph {
-  padding: 2.5rem 0 2rem;
+  padding: 2rem 0 2.5rem;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -187,17 +193,17 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  border: 1px solid #ce9797;
+  border: 1px solid #2e8540;
   border-radius: 5rem;
   padding: 1rem;
-  min-width: 25vw;
+  width: 30vw;
   color: #413a3a;
   font-family: "Josefin Sans", sans-serif;
 }
 
 @media only screen and (max-width: 62.5em) {
   .left-side input {
-    width: 40vw;
+    width: 35vw;
   }
 }
 
@@ -214,32 +220,32 @@ body {
 }
 
 .left-side input::-webkit-input-placeholder {
-  color: #ce9797;
+  color: #2e8540;
   font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .left-side input:-ms-input-placeholder {
-  color: #ce9797;
+  color: #2e8540;
   font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .left-side input::-ms-input-placeholder {
-  color: #ce9797;
+  color: #2e8540;
   font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .left-side input::placeholder {
-  color: #ce9797;
+  color: #2e8540;
   font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
 .left-side input:hover, .left-side input:focus {
-  border: 2px solid #f96262;
-  outline: #f96262;
+  border: 2px solid #2e8540;
+  outline: #2e8540;
 }
 
 .left-side .error-icon {
@@ -271,7 +277,7 @@ body {
   position: absolute;
   display: block;
   visibility: visible;
-  color: #f96262;
+  color: #d35400;
   font-weight: 600;
   font-size: 1rem;
 }
@@ -299,8 +305,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  background-color: #f1bebe;
+  background-image: linear-gradient(135deg, #feffea, #537451);
+  background-color: #a3de83;
   cursor: pointer;
 }
 
@@ -312,31 +318,30 @@ body {
 
 .left-side button:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0.3rem 1rem 1.5rem 0.3rem #e7cbcb;
-          box-shadow: 0.3rem 1rem 1.5rem 0.3rem #e7cbcb;
+  -webkit-box-shadow: 0.3rem 1rem 1.5rem 0.3rem #a3de8380;
+          box-shadow: 0.3rem 1rem 1.5rem 0.3rem #a3de8380;
   background-image: inherit;
-  background-color: #f8d2d2;
+  background-color: #a3de83;
   outline: none;
 }
 
 .left-side button:focus-visible {
-  border: 2px solid #f96262;
-  outline: #f96262;
+  border: 2px solid #d35400;
+  outline: #d35400;
 }
 
 .right-side {
-  background-image: url(/images/hero-desktop.jpg);
-  background-repeat: no-repeat;
+  background-image: url(/images/pexels-element-digital-1470171.jpg);
+  background-repeat: repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: right;
 }
 
 @media only screen and (max-width: 81.25em) {
   .right-side {
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 80vh;
+    background-size: cover;
   }
 }
 
@@ -354,13 +359,13 @@ body {
 }
 
 .footer__links {
-  color: #ce9797;
+  color: #2e8540;
   text-decoration: none;
 }
 
 .footer__links:hover {
   cursor: pointer;
-  color: #f96262;
+  color: #d35400;
 }
 
 @media only screen and (max-width: 37.5em) {
